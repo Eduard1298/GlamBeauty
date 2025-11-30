@@ -1,0 +1,127 @@
+/* ————— TIPOGRAFÍA ————— */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #111;
+  color: #eee;
+}
+
+.logo {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: white;
+  font-weight: 300;
+}
+
+.logo span {
+  color: #d7a945;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* ————— HERO ————— */
+.hero {
+  height: 80vh;
+  background: url('../img/hero.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+}
+
+.hero-desc {
+  font-size: 1.3rem;
+  color: #ccc;
+}
+
+/* ————— PRODUCTOS ————— */
+.section-title {
+  font-size: 2.2rem;
+  color: #d7a945;
+  text-align: center;
+}
+
+.product-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column; /* Para que img y body estén en columna */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #d7a945;
+}
+
+/* Ajuste de imágenes para que todas tengan mismo tamaño */
+.product-card img {
+  height: 250px;      /* altura fija */
+  width: 100%;        /* ancho completo del card */
+  object-fit: cover;  /* recorta sin deformar */
+  border-radius: 10px;
+}
+
+/* Asegurar que títulos y descripciones no desbalanceen las tarjetas */
+.product-card .card-body {
+  flex-grow: 1;           /* hace que el contenido ocupe todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ————— TESTIMONIOS ————— */
+.testimonios {
+  background-color: #0d0d0d;
+}
+
+.quote {
+  color: #ddd;
+  font-style: italic;
+}
+
+.client {
+  display: block;
+  margin-top: 5px;
+  color: #d7a945;
+}
+
+/* ————— FOOTER ————— */
+footer {
+  color: #aaa;
+}
+
+/* ————— CENTRAR BARRA DE NAVEGACIÓN ————— */
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra los elementos de la barra */
+}
+
+/* Mantener el botón del carrito a la derecha */
+.navbar .btn-outline-warning {
+  margin-left: auto;
+}
+
+/* ————— VIDEO RESPONSIVE ESTILIZADO ————— */
+.tip-section .ratio iframe {
+  border-radius: 10px;      /* Bordes redondeados como las imágenes */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}

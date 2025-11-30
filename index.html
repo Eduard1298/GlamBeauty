@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlamBeauty — Maquillaje Profesional</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- CSS propio -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    h1.logo {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      color: #ffc107;
+      font-size: 1.2rem;
+    }
+
+    /* HERO CON FONDO */
+    .hero {
+      height: 80vh;
+      background-image: url('img/brochas.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero .hero-desc {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .product-card img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    .client {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: #ffc107;
+    }
+
+    .section-title {
+      font-weight: 700;
+      color: #ffc107;
+      margin-bottom: 1.5rem;
+    }
+
+    footer p, footer a {
+      color: #ccc;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      color: #ffc107;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body class="bg-dark text-light">
+
+  <!-- HEADER + LOGO -->
+  <header class="container-fluid py-4 text-center border-bottom border-secondary">
+    <h1 class="logo">GLAM<span>BEAUTY</span></h1>
+    <p class="subtitle">Belleza que ilumina la oscuridad</p>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="tendencias.html">Tendencias</a></li>
+        </ul>
+
+        <!-- CARRITO -->
+        <button class="btn btn-outline-warning ms-3" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+          🛒 <span id="countCarrito" class="badge bg-warning text-dark">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero d-flex align-items-center text-light">
+    <div class="container text-center">
+      <h2 class="hero-title">Belleza que deslumbra</h2>
+      <p class="hero-desc">Maquillaje profesional, moderno y elegante.</p>
+      <a href="productos.html" class="btn btn-warning btn-lg mt-3">Explorar Productos</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DESTACADOS -->
+  <section class="container mt-5">
+    <h3 class="section-title">Productos Destacados</h3>
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/labial.jpg" class="card-img-top" alt="Labial">
+          <div class="card-body text-center">
+            <h5>Labial Matte Lux</h5>
+            <p class="text-secondary">Color intenso y acabado premium.</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Labial Matte Lux" data-precio="39000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/base.jpg" class="card-img-top" alt="Base">
+          <div class="card-body text-center">
+            <h5>Base HD Pro</h5>
+            <p class="text-secondary">Cobertura perfecta y natural.</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Base HD Pro" data-precio="52000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/delineador.jpg" class="card-img-top" alt="Delineador">
+          <div class="card-body text-center">
+            <h5>Delineador Black Edition</h5>
+            <p class="text-secondary">Precisión absoluta y duración extrema.</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Delineador Black Edition" data-precio="28000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios mt-5 py-5">
+    <div class="container text-center">
+      <h3 class="section-title">Lo que dicen nuestros clientes</h3>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <p class="quote">“Los productos son de excelente calidad. Mi nuevo lugar favorito.”</p>
+          <span class="client"><i class="fas fa-user-circle"></i> Marlen</span>
+        </div>
+        <div class="col-md-4">
+          <p class="quote">“Atención increíble y maquillaje profesional ¡me encanta!”</p>
+          <span class="client"><i class="fas fa-user-circle"></i> Laura</span>
+        </div>
+        <div class="col-md-4">
+          <p class="quote">“Lo recomiendo a todas, colores hermosos y muy duraderos.”</p>
+          <span class="client"><i class="fas fa-user-circle"></i> Sofía</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 mt-5 border-top border-secondary">
+    <p>© 2025 GlamBeauty — Belleza que ilumina la oscuridad</p>
+    <div class="mt-2">
+      <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+    </div>
+  </footer>
+
+  <!-- MODAL CARRITO -->
+  <div class="modal fade" id="modalCarrito">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title">Carrito de Compras</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="listaCarrito" class="list-group"></ul>
+          <h5 class="mt-3">Total: <span id="totalCarrito">0</span> COP</h5>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-warning">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

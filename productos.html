@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos — GlamBeauty</title>
+
+    <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-dark text-light">
+
+  <!-- HEADER -->
+  <header class="container-fluid py-4 text-center border-bottom border-secondary">
+    <h1 class="logo">GLAM<span>BEAUTY</span></h1>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="tendencias.html">Tendencias</a></li>
+        </ul>
+
+        <button class="btn btn-outline-warning ms-3" data-bs-toggle="modal" data-bs-target="#modalCarrito">
+          🛒 <span id="countCarrito" class="badge bg-warning text-dark">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <section class="container mt-5">
+    <h2 class="section-title">Todos los Productos</h2>
+
+    <!-- MAQUILLAJE -->
+    <h3 class="tip-title mt-4">Maquillaje</h3>
+    <div class="row mt-3">
+      <!-- Bases y polvos -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/polvos.jpg" class="card-img-top" alt="Bases y polvos">
+          <div class="card-body text-center">
+            <h5>Bases y Polvos</h5>
+            <p class="text-secondary">Tonos para cada ocasión</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Bases y Polvos" data-precio="45000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Labiales -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/labial.jpg" class="card-img-top" alt="Labiales">
+          <div class="card-body text-center">
+            <h5>Labiales</h5>
+            <p class="text-secondary">Color intenso y duradero</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Labiales" data-precio="39000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sombras -->
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/sombras.jpg" class="card-img-top" alt="Sombras">
+          <div class="card-body text-center">
+            <h5>Sombras</h5>
+            <p class="text-secondary">Paletas para todos los looks</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Sombras" data-precio="47000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUIDADO FACIAL -->
+    <h3 class="tip-title mt-5">Cuidado Facial</h3>
+    <div class="row mt-3">
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/limpieza.jpg" class="card-img-top" alt="Limpieza">
+          <div class="card-body text-center">
+            <h5>Limpieza</h5>
+            <p class="text-secondary">Rutinas para piel saludable</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Limpieza" data-precio="32000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/hidratante.jpg" class="card-img-top" alt="Hidratantes">
+          <div class="card-body text-center">
+            <h5>Hidratantes</h5>
+            <p class="text-secondary">Protege e hidrata tu piel</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Hidratantes" data-precio="35000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/tratamientos.jpg" class="card-img-top" alt="Tratamientos">
+          <div class="card-body text-center">
+            <h5>Tratamientos</h5>
+            <p class="text-secondary">Soluciones para tu piel</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Tratamientos" data-precio="50000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCESORIOS -->
+    <h3 class="tip-title mt-5">Accesorios</h3>
+    <div class="row mt-3">
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/brochas.jpg" class="card-img-top" alt="Brochas">
+          <div class="card-body text-center">
+            <h5>Brochas</h5>
+            <p class="text-secondary">Acabado profesional fácil</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Brochas" data-precio="27000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/esponja.jpg" class="card-img-top" alt="Esponjas">
+          <div class="card-body text-center">
+            <h5>Esponjas</h5>
+            <p class="text-secondary">Aplicación uniforme</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Esponjas" data-precio="15000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card product-card">
+          <img src="img/organizador.jpg" class="card-img-top" alt="Organizadores">
+          <div class="card-body text-center">
+            <h5>Organizadores</h5>
+            <p class="text-secondary">Maquillaje siempre ordenado</p>
+            <button class="btn btn-warning w-100 btn-comprar" data-nombre="Organizadores" data-precio="40000">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 border-top border-secondary mt-5">
+    <p>© 2025 GlamBeauty — Belleza que ilumina la oscuridad</p>
+    </div>
+  </footer>
+
+  <!-- MODAL CARRITO -->
+  <div class="modal fade" id="modalCarrito">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title">Carrito de Compras</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="listaCarrito" class="list-group"></ul>
+          <h5 class="mt-3">Total: <span id="totalCarrito">0</span> COP</h5>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-warning">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/carrito.js"></script>
+
+</body>
+</html>
